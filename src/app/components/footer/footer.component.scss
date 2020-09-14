@@ -1,0 +1,26 @@
+section {
+    background-color: white;
+    color: gray;
+    .container-lg {
+        opacity: 0.75;
+    }
+    a {
+        color: gray;
+    }
+    .social {
+        i.fab {
+            font-size: 1.5rem;
+        }
+    }
+    .nav {
+        .nav-link {
+            padding: 0 0.5rem;
+            &:last-child {
+                padding-right: 0;
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

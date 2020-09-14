@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,11 +70,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "karros-tech-fe:build"
+            "browserTarget": "karros-tech-fe:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "karros-tech-fe:build:production"
+              "browserTarget": "karros-tech-fe:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
@@ -123,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "karros-tech-fe"
+    }
+  },
+  "defaultProject": "karros-tech-fe",
+  "cli": {
+    "analytics": "8352e65c-105d-4358-93e2-5e66ea99d754"
+  }
 }
