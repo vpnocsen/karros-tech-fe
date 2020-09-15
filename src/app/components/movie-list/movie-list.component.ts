@@ -77,6 +77,7 @@ export class MovieListComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.totalPages = res.totalPages;
                 this.hasMore = this.page < this.totalPages;
                 this.movies = this.movies.concat(res.data);
+                return res;
             }),
             catchError(err => of(null))
         ).subscribe(res => {

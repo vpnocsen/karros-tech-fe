@@ -12,7 +12,10 @@ import { MovieListItem } from '../components/movie-list/movie-list.model';
 })
 export class ApiService {
 
-  constructor(private http: HttpClient, private storage: StorageService) { }
+  constructor(
+    private http: HttpClient,
+    private storage: StorageService
+  ) { }
 
   discoverMovie(genres: string, page) {
     const url = `api/discover/movie`;
